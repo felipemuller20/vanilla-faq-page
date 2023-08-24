@@ -8,13 +8,13 @@ sectionsArray.forEach((section) => {
     if (section.classList.contains("closed")) {
       section.classList.remove("closed")
       section.classList.add("open")
-      question.children[0].innerHTML = "arrow_drop_down"
+      question.children[1].innerHTML = "keyboard_arrow_up"
       const clone = answer.cloneNode(true)
       section.appendChild(clone.content)
     } else if (section.classList.contains("open")) {
       section.classList.remove("open")
       section.classList.add("closed")
-      question.children[0].innerHTML = "arrow_right"
+      question.children[1].innerHTML = "keyboard_arrow_down"
       section.removeChild(section.children[2])
     }
   })
